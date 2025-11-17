@@ -6,174 +6,70 @@
     <title>Diseños Josefas</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    <style>
-
-
-.gallery img {
-  margin: 0;
-  padding: 0;
-  display: block;
-}
-        
+  <style>
+/* ===== Fuentes y Reset ===== */
 body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: #000;
     overflow-x: hidden;
 }
-       /* GALERÍA PREMIUM */
 
-.gallery {
-    overscroll-behavior-x: contain;
-  margin: 0 auto;
-  padding: 0;
-}
-
-.gallery img:last-child {
-  margin-right: 0;
-}
-        
- .gallery-section {
-    width: 100%;
-    max-width: 100vw;
-    overflow: hidden;
-    padding: 50px 10px;   /* ← menos padding lateral */
-    background: #000;
-
-    display: flex;
-    justify-content: center;  /* ← centra TODO el contenido real */
-}
-
-
-.gallery-title {
-    text-align: center;
-    font-size: 2.4rem;
-    color: #EEEDE8;
-    letter-spacing: 3px;
-    margin-bottom: 60px;
-    text-shadow: 0 5px 25px rgba(0,0,0,0.5);
-}
-
-/* GRID PREMIUM CON IMÁGENES IGUALES */
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-    max-width: 1300px;
-    margin: 0 auto; /* centra el grid */
-}
-
-/* Cada imagen queda del mismo tamaño */
-.gallery-grid img {
-    width: 100%;
-    height: 420px; /* ← AJUSTA EL ALTO QUE QUIERAS */
-    object-fit: cover; /* ← MAGIA: recorta sin deformar */
-    border-radius: 18px;
+img {
     display: block;
-
-    /* SOMBRA ELEGANTE */
-    box-shadow: 0px 10px 40px rgba(0,0,0,0.4);
-
-    /* TRANSICIÓN SUAVE */
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    max-width: 100%;
 }
 
-/* HOVER SUPER PREMIUM */
-.gallery-grid img:hover {
-    transform: scale(1.02);
-    opacity: 0.9;
-}
-        
-        body {
-            margin: 0;
-            font-family: 'Montserrat', sans-serif;
-            background: #000000;
-        }
-
-        /* NAVBAR */
-        .navbar {
-            width: 100%;
-            background: #000;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 18px 50px;
-            box-sizing: border-box;
-        }
-
-        .navbar-title {
-            font-size: 1.6rem;
-            font-weight: 500;
-            letter-spacing: 1px;
-        }
-
-        .navbar-center {
-            display: flex;
-            gap: 40px;
-        }
-
-        .navbar-center a {
-            color: white;
-            text-decoration: none;
-            font-size: 1rem;
-            transition: 0.2s;
-        }
-
-        .navbar-center a:hover {
-            opacity: 0.7;
-        }
-
-        .navbar-button {
-            background: white;
-            color: black;
-            padding: 10px 20px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: 0.2s;
-        }
-
-        .navbar-button:hover {
-            background: #e9e9e9;
-        }
-
-/* SECCIÓN DEL iPAD */
-.ipad-section {
+/* ===== NAVBAR ===== */
+.navbar {
     width: 100%;
+    background: #000;
+    color: white;
     display: flex;
-    justify-content: center;
-    margin: -180px 0 80px 0;
-    position: relative;   /* ← NECESARIO */
-    z-index: 50;          /* ← AHORA SÍ FUNCIONA */
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 50px;
+    box-sizing: border-box;
 }
 
-/* MARCO DEL iPAD */
-.ipad-frame {
-    width: 800px;             /* Ancho típico de iPad vertical */
-    height: 480px;            /* Alto proporcional */
-    background: #111;      /* Marco */
-    border-radius: 18px;      /* Esquinas redondeadas */
-    padding: 5px;            /* Borde del marco */
-    box-shadow: 0 12px 45px rgba(0,0,0,0.3); /* Sombra realista */
-    position: relative;
+.navbar-title {
+    font-size: 1.6rem;
+    font-weight: 500;
+    letter-spacing: 1px;
 }
 
-/* PANTALLA INTERNA */
-.ipad-screen {
-    width: 100%;
-    height: 100%;
-    background: black;
-    border-radius: 18px;
-    overflow: hidden;
+.navbar-center {
+    display: flex;
+    gap: 40px;
 }
 
-/* VIDEO DENTRO DEL iPAD */
-.ipad-screen video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Se ajusta sin deformarse */
+.navbar-center a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: 0.2s;
 }
 
-/* ===== HERO RECONSTRUIDO ===== */
+.navbar-center a:hover {
+    opacity: 0.7;
+}
 
+.navbar-button {
+    background: white;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.navbar-button:hover {
+    background: #e9e9e9;
+}
+
+/* ===== HERO ===== */
 .hero-josefas {
     position: relative;
     width: 100%;
@@ -182,39 +78,34 @@ body, html {
     justify-content: center;
     align-items: center;
     padding: 60px 20px;
-    overflow: visible; /* permite que el iPad se encime */
+    overflow: visible;
 }
 
-/* Imagen de fondo que NO se corta y mantiene proporción */
 .hero-bg {
     position: absolute;
     inset: 0;
-    background-image: url('backhero.jpg'); /* Ajusta aquí el nombre */
+    background-image: url('backhero.jpg');
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover; 
     z-index: 1;
 }
 
-/* Capa oscura detrás */
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.55); /* ajusta opacidad si quieres */
+    background: rgba(0,0,0,0.55);
     z-index: 2;
 }
 
-/* Contenido centrado */
 .hero-content {
     position: relative;
     z-index: 10;
     text-align: center;
     max-width: 900px;
-    margin-top: -80px; /* <<< Ajusta aquí para subir o bajar */
-
+    margin-top: -80px;
 }
 
-/* Textos con sombra */
 .hero-subtitle {
     color: #EEEDE8;
     font-size: 1.4rem;
@@ -229,7 +120,6 @@ body, html {
     text-shadow: 0 0 18px rgba(0,0,0,0.9);
 }
 
-/* Píldora */
 .hero-pill-menu {
     margin-top: 40px;
     display: flex;
@@ -252,13 +142,87 @@ body, html {
     font-weight: 400;
 }
 
-/* Hover */
 .hero-pill-menu a:hover {
     opacity: 0.7;
 }
-        
 
-    </style>
+/* ===== IPAD SECTION ===== */
+.ipad-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: -180px 0 80px 0;
+    position: relative;
+    z-index: 50;
+}
+
+.ipad-frame {
+    width: 800px;
+    height: 480px;
+    background: #111;
+    border-radius: 18px;
+    padding: 5px;
+    box-shadow: 0 12px 45px rgba(0,0,0,0.3);
+    position: relative;
+}
+
+.ipad-screen {
+    width: 100%;
+    height: 100%;
+    background: black;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.ipad-screen video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ===== GALERÍA ===== */
+.gallery-section {
+    width: 100%;
+    padding: 50px 10px; /* menos padding lateral */
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centra todo el contenido */
+}
+
+.gallery-title {
+    text-align: center;
+    font-size: 2.4rem;
+    color: #EEEDE8;
+    letter-spacing: 3px;
+    margin-bottom: 60px;
+    text-shadow: 0 5px 25px rgba(0,0,0,0.5);
+}
+
+/* GRID PREMIUM CON IMÁGENES IGUALES */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto; /* centra el grid */
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 420px; /* AJUSTA EL ALTO QUE QUIERAS */
+    object-fit: cover;
+    border-radius: 18px;
+    display: block;
+    box-shadow: 0px 10px 40px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.02);
+    opacity: 0.9;
+}
 </head>
 
 <body>
