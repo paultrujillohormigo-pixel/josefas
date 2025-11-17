@@ -1,153 +1,186 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Diseños Josefas — Navbar</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --nav-height:72px;
-      --nav-bg:#000;
-      --accent:#ffffff;
-      --btn-bg:#ffffff;
-      --btn-color:#000;
-      --gap:48px;
-      --max-width:1200px;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseños Josefas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    /* Reset básico */
-    *{box-sizing:border-box;margin:0;padding:0}
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background: #f4f4f4;
+        }
 
-    body{
-      font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background:#fff;
-      color:#222;
-    }
+        /* NAVBAR */
+        .navbar {
+            width: 100%;
+            background: #000;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 50px;
+            box-sizing: border-box;
+        }
 
-    /* Navbar contenedor */
-    .nav-wrap{
-      background:var(--nav-bg);
-      color:var(--accent);
-      height:var(--nav-height);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      box-shadow:0 4px 12px rgba(0,0,0,0.15);
-    }
+        .navbar-title {
+            font-size: 1.6rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
 
-    /* ancho "considerable" centrado */
-    .nav{
-      width:100%;
-      max-width:var(--max-width);
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:16px;
-      padding:0 20px;
-    }
+        .navbar-center {
+            display: flex;
+            gap: 40px;
+        }
 
-    /* Left: marca */
-    .brand{
-      font-weight:700;
-      font-size:1.15rem;
-      letter-spacing:0.6px;
-    }
+        .navbar-center a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: 0.2s;
+        }
 
-    /* Center: links */
-    .nav-links{
-      display:flex;
-      gap:var(--gap);
-      align-items:center;
-      justify-content:center;
-      flex:1;
-    }
-    .nav-links a{
-      color:var(--accent);
-      text-decoration:none;
-      font-weight:600;
-      font-size:0.98rem;
-      opacity:0.95;
-      transition:opacity .15s ease, transform .12s ease;
-    }
-    .nav-links a:hover{ opacity:1; transform:translateY(-2px) }
+        .navbar-center a:hover {
+            opacity: 0.7;
+        }
 
-    /* Right: CTA */
-    .cta{
-      background:var(--btn-bg);
-      color:var(--btn-color);
-      padding:10px 16px;
-      border-radius:6px;
-      font-weight:700;
-      text-decoration:none;
-      box-shadow:0 6px 14px rgba(0,0,0,0.12);
-      transition:transform .12s ease, box-shadow .12s ease;
-      white-space:nowrap;
-    }
-    .cta:hover{ transform:translateY(-3px); box-shadow:0 10px 20px rgba(0,0,0,0.16) }
+        .navbar-button {
+            background: white;
+            color: black;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.2s;
+        }
 
-    /* Responsive: mobile */
-    @media (max-width:860px){
-      .nav-links{ gap:20px }
-      .nav { padding:0 14px }
-    }
-    @media (max-width:680px){
-      .nav-links{ display:none } /* ocultar links en móvil por ahora */
-      .brand{ font-size:1rem }
-    }
-  </style>
+        .navbar-button:hover {
+            background: #e9e9e9;
+        }
+
+        /* HERO */
+        .hero-josefas {
+            position: relative;
+            width: 100%;
+            height: 90vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background-image: url("https://images.pexels.com/photos/1738646/pexels-photo-1738646.jpeg"); /* temporal */
+            background-size: cover;
+            background-position: center;
+            filter: brightness(0.35);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            max-width: 900px;
+            margin-top: -40px;
+        }
+
+        .hero-subtitle {
+            display: block;
+            color: #EEEDE8;
+            font-size: 1.3rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .hero-title {
+            color: white;
+            font-size: 4.2rem;
+            font-weight: 500;
+            margin: 0;
+            letter-spacing: -1px;
+        }
+
+        .hero-button {
+            display: inline-block;
+            margin-top: 28px;
+            padding: 16px 38px;
+            background: white;
+            color: black;
+            font-size: 1.1rem;
+            font-weight: 500;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: 0.2s;
+        }
+
+        .hero-button:hover {
+            background: #f0f0f0;
+        }
+
+        .hero-pill-menu {
+            margin-top: 70px;
+            display: flex;
+            gap: 40px;
+            background: rgba(20, 20, 20, 0.8);
+            padding: 18px 40px;
+            border-radius: 50px;
+            backdrop-filter: blur(6px);
+        }
+
+        .hero-pill-menu a {
+            color: #EEEDE8;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 400;
+            transition: 0.2s;
+        }
+
+        .hero-pill-menu a:hover {
+            opacity: 0.7;
+        }
+    </style>
 </head>
+
 <body>
 
-  <header class="nav-wrap" role="banner">
-    <div class="nav" role="navigation" aria-label="Main navigation">
-      <div class="brand">Diseños Josefas</div>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="navbar-title">Diseños Josefas</div>
 
-      <nav class="nav-links" aria-label="Secciones principales">
-        <a href="#modelos">Modelos</a>
-        <a href="#colores">Colores</a>
-        <a href="#acerca">Acerca de</a>
-      </nav>
+        <div class="navbar-center">
+            <a href="#modelos">Modelos</a>
+            <a href="#colores">Colores</a>
+            <a href="#acerca">Acerca de</a>
+        </div>
 
-      <a class="cta" href="#cita">Agenda una cita</a>
-    </div>
-  </header>
-
-  <!-- Espacio de demostración -->
-  <main style="padding:40px;max-width:1100px;margin:120px auto 200px;">
-    <h2>Navbar lista — seguimos construyendo</h2>
-    <p>Si te gusta este diseño confirmo y agrego: hero, carrusel o versión móvil con menú hamburguesa.</p>
-  </main>
-
-<section class="hero-esc">
-
-  <!-- ▸ Fondo -->
-  <div class="hero-bg"></div>
-
-  <!-- ▸ Menú flotante -->
-  <nav class="hero-menu">
-    <a href="#galeria">Galería</a>
-    <a href="#materiales">Materiales</a>
-    <a href="#historia">Historia</a>
-  </nav>
-
-  <!-- ▸ Contenedor del iPad -->
-  <div class="ipad-frame">
-      <!-- Aquí insertas tu video -->
-      <div class="ipad-screen">
-        <!-- ejemplo con iframe: reemplázalo -->
-        <iframe 
-          src="https://www.youtube.com/embed/VIDEO_ID" 
-          frameborder="0" 
-          allowfullscreen>
-        </iframe>
-      </div>
-  </div>
-
-</section>
+        <a href="#cita" class="navbar-button">Agenda una cita</a>
+    </nav>
 
 
+    <!-- HERO SECTION -->
+    <section class="hero-josefas">
+        <div class="hero-bg"></div>
 
-  
+        <div class="hero-content">
+            <span class="hero-subtitle">Diseños Josefas</span>
+            <h1 class="hero-title">Elegancia con tradición</h1>
+
+            <a href="#cita" class="hero-button">Agenda una cita</a>
+
+            <div class="hero-pill-menu">
+                <a href="#galeria">Galería</a>
+                <a href="#materiales">Materiales</a>
+                <a href="#historia">Historia</a>
+            </div>
+        </div>
+    </section>
+
 </body>
 </html>
