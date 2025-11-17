@@ -98,74 +98,70 @@
     object-fit: cover; /* Se ajusta sin deformarse */
 }
 
+/* ===== HERO RECONSTRUIDO ===== */
 
-        
-
-    /* CONTENEDOR PRINCIPAL DEL HERO */
-
-
-        
-      /* CONTENEDOR PRINCIPAL DEL HERO */
 .hero-josefas {
     position: relative;
     width: 100%;
-    min-height: 100vh;
+    min-height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
-    padding: 40px 20px;
+    padding: 60px 20px;
+    overflow: visible; /* permite que el iPad se encime */
 }
 
-/* IMAGEN DE FONDO AJUSTADA SIN RECORTE + EFECTO FLOTANTE */
+/* Imagen de fondo que NO se corta y mantiene proporción */
 .hero-bg {
     position: absolute;
     inset: 0;
-    background-image: url('fotofondo2.jpg');
-    background-size: contain;       /* ← hace que NO se corte */
-    background-position: center;
+    background-image: url('fotofondo1.jpeg'); /* Ajusta aquí el nombre */
     background-repeat: no-repeat;
-    filter: brightness(0.4); /* MÁS OSCURA */
-
-
-    /* EFECTO DE FLOTAR (sombra detrás) */
-    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.6));
+    background-position: center top;
+    background-size: contain; /* <<< hace que NO se corte */
     z-index: 1;
 }
 
-/* CONTENIDO DEL HERO */
+/* Capa oscura detrás */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55); /* ajusta opacidad si quieres */
+    z-index: 2;
+}
+
+/* Contenido centrado */
 .hero-content {
     position: relative;
-    z-index: 2;
+    z-index: 10;
     text-align: center;
-    color: white;
+    max-width: 900px;
 }
 
-/* SUBTÍTULO */
+/* Textos con sombra */
 .hero-subtitle {
-    font-size: 1.2rem;
-    letter-spacing: 2px;
-    text-shadow: 0px 4px 25px rgba(0, 0, 0, 0.9);
-
+    color: #EEEDE8;
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    text-shadow: 0 0 12px rgba(0,0,0,0.8);
 }
 
-/* TÍTULO */
 .hero-title {
-    font-size: 3rem;
-    margin: 10px 0 40px;
-    text-shadow: 0px 4px 35px rgba(0, 0, 0, 0.9);
-
+    color: white;
+    font-size: 4rem;
+    margin: 0;
+    text-shadow: 0 0 18px rgba(0,0,0,0.9);
 }
 
-/* PILLS MENU (BURBUJA) */
+/* Píldora */
 .hero-pill-menu {
-    margin-top: 20px;
+    margin-top: 40px;
     display: flex;
-    justify-content: center;   /* CENTRAR CONTENIDO */
-    align-items: center;       /* CENTRAR VERTICAL */
+    justify-content: center;
+    align-items: center;
     gap: 40px;
     background: rgba(20,20,20,0.8);
-    padding: 18px 200px;
+    padding: 18px 40px;
     border-radius: 50px;
     backdrop-filter: blur(6px);
     width: fit-content;
@@ -173,18 +169,18 @@
     margin-right: auto;
 }
 
-/* LINKS DENTRO DEL PILL */
 .hero-pill-menu a {
     color: #EEEDE8;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 400;
-    transition: 0.2s;
 }
 
+/* Hover */
 .hero-pill-menu a:hover {
     opacity: 0.7;
 }
+        
 
     </style>
 </head>
@@ -205,21 +201,21 @@
     </nav>
 
 
-    <!-- HERO SECTION -->
-    <section class="hero-josefas">
-        <div class="hero-bg"></div>
+   <section class="hero-josefas">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
 
-        <div class="hero-content">
-            <span class="hero-subtitle">Diseños Josefas</span>
-            <h1 class="hero-title">Elegancia con tradición</h1>
+    <div class="hero-content">
+        <span class="hero-subtitle">Diseños Josefas</span>
+        <h1 class="hero-title">Elegancia con tradición</h1>
 
-            <div class="hero-pill-menu">
-                <a href="#galeria">Galería</a>
-                <a href="#materiales">Materiales</a>
-                <a href="#historia">Historia</a>
-            </div>
+        <div class="hero-pill-menu">
+            <a href="#galeria">Galería</a>
+            <a href="#materiales">Materiales</a>
+            <a href="#historia">Historia</a>
         </div>
-    </section>
+    </div>
+</section>
 
 
     <!-- IPAD SECTION -->    
