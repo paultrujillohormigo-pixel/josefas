@@ -73,19 +73,18 @@
         }
 
         .hero-bg {
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    overflow: hidden;
-}
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            overflow: hidden;
+        }
 
-.hero-bg img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* evita cortes y rellena */
-    object-position: center; 
-    filter: brightness(0.35);
-}
+        .hero-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            filter:
 
         .hero-content {
             position: relative;
@@ -93,8 +92,6 @@
             text-align: center;
             max-width: 900px;
             margin-top: -40px;
-            align-items: center;
-            
         }
 
         .hero-subtitle {
@@ -104,8 +101,6 @@
             font-weight: 300;
             letter-spacing: 1px;
             margin-bottom: 10px;
-            text-align: center;
-            
         }
 
         .hero-title {
@@ -127,14 +122,13 @@
             text-decoration: none;
             border-radius: 4px;
             transition: 0.2s;
-            
         }
 
         .hero-button:hover {
             background: #f0f0f0;
         }
 
-        .hero-pill-menu {
+        .hero-pill-menu { justify-content: center;
             margin-top: 70px;
             display: flex;
             gap: 40px;
@@ -142,7 +136,6 @@
             padding: 18px 40px;
             border-radius: 50px;
             backdrop-filter: blur(6px);
-            justify-content: center;
         }
 
         .hero-pill-menu a {
@@ -178,15 +171,16 @@
     <!-- HERO SECTION -->
     <section class="hero-josefas">
         <div class="hero-bg">
-            <img src="fotofondo1.jpeg" alt="fondo">
-        </div>
+    <img src="fotofondo1.jpeg" alt="fondo">
+</div>
+
         <div class="hero-content">
             <span class="hero-subtitle">Diseños Josefas</span>
             <h1 class="hero-title">Elegancia con tradición</h1>
 
+            <a href="#cita" class="hero-button">Agenda una cita</a>
 
             <div class="hero-pill-menu">
-                
                 <a href="#galeria">Galería</a>
                 <a href="#materiales">Materiales</a>
                 <a href="#historia">Historia</a>
