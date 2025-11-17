@@ -7,6 +7,49 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <style>
+
+
+        /* GALERÍA PREMIUM */
+.gallery-section {
+    width: 100%;
+    padding: 120px 70px;
+    background: #000;
+}
+
+.gallery-title {
+    text-align: center;
+    font-size: 2.4rem;
+    color: #EEEDE8;
+    letter-spacing: 3px;
+    margin-bottom: 60px;
+    text-shadow: 0 5px 25px rgba(0,0,0,0.5);
+}
+
+/* GRID FLUIDO PRECIOSO */
+.gallery-grid {
+    columns: 3; /* número de columnas tipo Pinterest */
+    column-gap: 25px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    margin-bottom: 25px;
+    border-radius: 18px;
+    display: block;
+
+    /* SOMBRA ELEGANTE */
+    box-shadow: 0px 10px 40px rgba(0,0,0,0.4);
+
+    /* TRANSICIÓN SUAVE */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* HOVER SUPER PREMIUM */
+.gallery-grid img:hover {
+    transform: scale(1.02);
+    opacity: 0.9;
+}
+        
         body {
             margin: 0;
             font-family: 'Montserrat', sans-serif;
@@ -229,6 +272,22 @@
          </div>
     </div>
     </section>
+
+<!-- Galeria SECTION -->    
+
+    
+    <section id="galeria" class="gallery-section">
+    <h2 class="gallery-title">Galería</h2>
+
+    <div class="gallery-grid">
+        <img src="foto1.jpeg" alt="">
+        <img src="foto2.jpeg" alt="">
+        <img src="foto3.jpeg" alt="">
+        <img src="foto4.jpeg" alt="">
+        <img src="foto5.jpeg" alt="">
+        <img src="foto6.jpeg" alt="">
+    </div>
+</section>
 
 </body>
 </html>
