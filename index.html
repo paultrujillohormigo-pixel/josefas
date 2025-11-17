@@ -1,238 +1,123 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Diseños Josefas – Catálogo</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet" />
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Diseños Josefas — Navbar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Montserrat', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f5f5f5;
-      color: #333;
+    :root{
+      --nav-height:72px;
+      --nav-bg:#000;
+      --accent:#ffffff;
+      --btn-bg:#ffffff;
+      --btn-color:#000;
+      --gap:48px;
+      --max-width:1200px;
     }
 
-    header {
-      background: #800000;
-      color: white;
-      padding: 20px 0;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 100;
-    }
-    header nav {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-    }
-    header nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 16px;
+    /* Reset básico */
+    *{box-sizing:border-box;margin:0;padding:0}
+
+    body{
+      font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:#fff;
+      color:#222;
     }
 
-    .hero {
-      margin-top: 80px;
-      height: 400px;
-      background: url('https://i.imgur.com/u5aJmPO.jpeg') center/cover no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .hero h1 {
-      background: rgba(0, 0, 0, 0.5);
-      padding: 20px 40px;
-      border-radius: 10px;
-      color: white;
-      font-size: 36px;
+    /* Navbar contenedor */
+    .nav-wrap{
+      background:var(--nav-bg);
+      color:var(--accent);
+      height:var(--nav-height);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-shadow:0 4px 12px rgba(0,0,0,0.15);
     }
 
-    .carousel {
-      max-width: 900px;
-      margin: 50px auto;
-      position: relative;
-      overflow: hidden;
-      border-radius: 8px;
-    }
-    .carousel img {
-      width: 100%;
-      display: none;
-    }
-    .carousel img.active {
-      display: block;
-    }
-    .carousel button {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(0,0,0,0.5);
-      color: white;
-      border: none;
-      padding: 10px;
-      cursor: pointer;
-      font-size: 18px;
-    }
-    .carousel .prev { left: 10px; }
-    .carousel .next { right: 10px; }
-
-    .catalogo {
-      padding: 40px 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
-    .catalogo h2 {
-      text-align: center;
-      color: #800000;
-      margin-bottom: 40px;
-      font-size: 30px;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 30px;
-    }
-    .item {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      overflow: hidden;
-      transition: transform 0.2s;
-    }
-    .item:hover {
-      transform: translateY(-5px);
-    }
-    .item img {
-      width: 100%;
-      height: 300px;
-      object-fit: cover;
-      cursor: pointer;
-    }
-    .item h3 {
-      margin: 15px 10px 5px;
-      color: #800000;
-      font-size: 20px;
-    }
-    .item a {
-      display: block;
-      margin: 0 10px 15px;
-      text-align: center;
-      background: #800000;
-      color: white;
-      padding: 10px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 500;
+    /* ancho "considerable" centrado */
+    .nav{
+      width:100%;
+      max-width:var(--max-width);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      padding:0 20px;
     }
 
-    .lightbox {
-      display: none;
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.8);
-      justify-content: center;
-      align-items: center;
-      z-index: 2000;
-    }
-    .lightbox img {
-      max-width: 70%;
-      max-height: 80%;
-      border-radius: 8px;
+    /* Left: marca */
+    .brand{
+      font-weight:700;
+      font-size:1.15rem;
+      letter-spacing:0.6px;
     }
 
-    footer {
-      background: #222;
-      color: white;
-      text-align: center;
-      padding: 40px 20px;
-      margin-top: 60px;
+    /* Center: links */
+    .nav-links{
+      display:flex;
+      gap:var(--gap);
+      align-items:center;
+      justify-content:center;
+      flex:1;
     }
-    footer a {
-      color: #fbc02d;
-      text-decoration: none;
-      font-weight: 600;
+    .nav-links a{
+      color:var(--accent);
+      text-decoration:none;
+      font-weight:600;
+      font-size:0.98rem;
+      opacity:0.95;
+      transition:opacity .15s ease, transform .12s ease;
+    }
+    .nav-links a:hover{ opacity:1; transform:translateY(-2px) }
+
+    /* Right: CTA */
+    .cta{
+      background:var(--btn-bg);
+      color:var(--btn-color);
+      padding:10px 16px;
+      border-radius:6px;
+      font-weight:700;
+      text-decoration:none;
+      box-shadow:0 6px 14px rgba(0,0,0,0.12);
+      transition:transform .12s ease, box-shadow .12s ease;
+      white-space:nowrap;
+    }
+    .cta:hover{ transform:translateY(-3px); box-shadow:0 10px 20px rgba(0,0,0,0.16) }
+
+    /* Responsive: mobile */
+    @media (max-width:860px){
+      .nav-links{ gap:20px }
+      .nav { padding:0 14px }
+    }
+    @media (max-width:680px){
+      .nav-links{ display:none } /* ocultar links en móvil por ahora */
+      .brand{ font-size:1rem }
     }
   </style>
 </head>
-
 <body>
 
-  <header>
-    <nav>
-      <a href="#inicio">Inicio</a>
-      <a href="#catalogo">Vestidos</a>
-      <a href="https://www.instagram.com/disenosjosefas/" target="_blank">Instagram</a>
-      <a href="https://wa.me/5214490000000" target="_blank">WhatsApp</a>
-    </nav>
+  <header class="nav-wrap" role="banner">
+    <div class="nav" role="navigation" aria-label="Main navigation">
+      <div class="brand">Diseños Josefas</div>
+
+      <nav class="nav-links" aria-label="Secciones principales">
+        <a href="#modelos">Modelos</a>
+        <a href="#colores">Colores</a>
+        <a href="#acerca">Acerca de</a>
+      </nav>
+
+      <a class="cta" href="#cita">Agenda una cita</a>
+    </div>
   </header>
 
-  <section class="hero" id="inicio">
-    <h1>Diseños Josefas</h1>
-  </section>
-
-  <div class="carousel">
-    <button class="prev">❮</button>
-    <button class="next">❯</button>
-    <img src="https://i.imgur.com/H4zRlqO.jpeg" class="active" alt="Vestido 1">
-    <img src="https://i.imgur.com/lj9rNhj.jpeg" alt="Vestido 2">
-    <img src="https://i.imgur.com/bfEvLCS.jpeg" alt="Vestido 3">
-  </div>
-
-  <section class="catalogo" id="catalogo">
-    <h2>Nuestros Modelos</h2>
-    <div class="grid">
-      <div class="item">
-        <img src="https://i.imgur.com/H4zRlqO.jpeg" onclick="openLightbox(this.src)" alt="Vestido Modelo 01">
-        <h3>Modelo 01</h3>
-        <a href="https://wa.me/5214490000000?text=Hola! Me interesa el Modelo 01">Solicitar info</a>
-      </div>
-      <div class="item">
-        <img src="https://i.imgur.com/lj9rNhj.jpeg" onclick="openLightbox(this.src)" alt="Vestido Modelo 02">
-        <h3>Modelo 02</h3>
-        <a href="https://wa.me/5214490000000?text=Hola! Me interesa el Modelo 02">Solicitar info</a>
-      </div>
-      <div class="item">
-        <img src="https://i.imgur.com/bfEvLCS.jpeg" onclick="openLightbox(this.src)" alt="Vestido Modelo 03">
-        <h3>Modelo 03</h3>
-        <a href="https://wa.me/5214490000000?text=Hola! Me interesa el Modelo 03">Solicitar info</a>
-      </div>
-      <!-- puedes agregar más vestidos aquí dinámicamente -->
-    </div>
-  </section>
-
-  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-    <img id="lightbox-img" src="" />
-  </div>
-
-  <footer>
-    <p>Diseños Josefas · Aguascalientes</p>
-    <p>Síguenos en <a href="https://www.instagram.com/disenosjosefas/" target="_blank">Instagram</a> o contáctanos por <a href="https://wa.me/5214490000000" target="_blank">WhatsApp</a></p>
-  </footer>
-
-  <script>
-    // Carousel JS
-    let idx = 0;
-    const imgs = document.querySelectorAll('.carousel img');
-    function show(idx) {
-      imgs.forEach((img, i) => img.classList.toggle('active', i === idx));
-    }
-    document.querySelector('.next').onclick = () => { idx = (idx + 1) % imgs.length; show(idx); }
-    document.querySelector('.prev').onclick = () => { idx = (idx - 1 + imgs.length) % imgs.length; show(idx); }
-
-    // Lightbox
-    function openLightbox(src) {
-      document.getElementById('lightbox-img').src = src;
-      document.getElementById('lightbox').style.display = 'flex';
-    }
-    function closeLightbox() {
-      document.getElementById('lightbox').style.display = 'none';
-    }
-  </script>
+  <!-- Espacio de demostración -->
+  <main style="padding:40px;max-width:1100px;margin:120px auto 200px;">
+    <h2>Navbar lista — seguimos construyendo</h2>
+    <p>Si te gusta este diseño confirmo y agrego: hero, carrusel o versión móvil con menú hamburguesa.</p>
+  </main>
 
 </body>
 </html>
