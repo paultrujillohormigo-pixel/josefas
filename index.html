@@ -73,14 +73,19 @@
         }
 
         .hero-bg {
-            position: absolute;
-            inset: 0;
-            background-image: url("fotofondo1.jpeg"); /* foto de fondo */
-            background-size: cover;
-            background-position: center;
-            filter: brightness(0.35);
-            z-index: 1;
-        }
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* evita cortes y rellena */
+    object-position: center; 
+    filter: brightness(0.35);
+}
 
         .hero-content {
             position: relative;
@@ -172,8 +177,9 @@
 
     <!-- HERO SECTION -->
     <section class="hero-josefas">
-        <div class="hero-bg"></div>
-
+        <div class="hero-bg">
+            <img src="fotofondo1.jpeg" alt="fondo">
+        </div>
         <div class="hero-content">
             <span class="hero-subtitle">Diseños Josefas</span>
             <h1 class="hero-title">Elegancia con tradición</h1>
