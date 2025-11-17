@@ -9,7 +9,7 @@
     <style>
 
 
-        /* GALERÍA PREMIUM */
+       /* GALERÍA PREMIUM */
 .gallery-section {
     width: 100%;
     padding: 120px 70px;
@@ -25,15 +25,18 @@
     text-shadow: 0 5px 25px rgba(0,0,0,0.5);
 }
 
-/* GRID FLUIDO PRECIOSO */
+/* GRID PREMIUM CON IMÁGENES IGUALES */
 .gallery-grid {
-    columns: 3; /* número de columnas tipo Pinterest */
-    column-gap: 25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
 }
 
+/* Cada imagen queda del mismo tamaño */
 .gallery-grid img {
     width: 100%;
-    margin-bottom: 25px;
+    height: 420px; /* ← AJUSTA EL ALTO QUE QUIERAS */
+    object-fit: cover; /* ← MAGIA: recorta sin deformar */
     border-radius: 18px;
     display: block;
 
@@ -276,16 +279,16 @@
 <!-- Galeria SECTION -->    
 
     
-    <section id="galeria" class="gallery-section">
+   <section class="gallery-section" id="galeria">
     <h2 class="gallery-title">Galería</h2>
 
     <div class="gallery-grid">
-        <img src="fotogal1.jpg" alt="">
-        <img src="fotogal2.jpg" alt="">
-        <img src="fotogal3.jpg" alt="">
-        <img src="foto4.jpeg" alt="">
-        <img src="foto5.jpeg" alt="">
-        <img src="foto6.jpeg" alt="">
+        <img src="fotogal1.jpg">
+        <img src="fotogal2.jpg">
+        <img src="fotogal3.jpg">
+        <img src="4.jpg">
+        <img src="5.jpg">
+        <img src="6.jpg">
     </div>
 </section>
 
