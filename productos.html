@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos Premium — Diseños Josefas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            background: #000;
+            color: #EEEDE8;
+        }
+
+        .products-section {
+            width: 100%;
+            max-width: 1300px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .products-title {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 50px;
+            text-shadow: 0 5px 25px rgba(0,0,0,0.5);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .product-card {
+            position: relative;
+            border-radius: 18px;
+            overflow: hidden;
+            background: #111;
+            box-shadow: 0px 10px 40px rgba(0,0,0,0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+        }
+
+        .product-card img {
+            width: 100%;
+            display: block;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        .product-card:hover img {
+            filter: brightness(0.6);
+            transform: scale(1.03);
+        }
+
+        /* Overlay y botones */
+        .product-overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            padding-bottom: 15px;
+            gap: 10px;
+            pointer-events: none; /* No bloquea el hover */
+        }
+
+        .product-overlay button {
+            background: #000;
+            color: gold;
+            border: 2px solid gold;
+            width: 90px;
+            height: 40px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            border-radius: 4px;
+            cursor: pointer;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+            pointer-events: auto;
+        }
+
+        .product-card:hover .product-overlay button {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .product-card:hover {
+            border: 2px solid gold;
+            box-shadow: 0px 15px 50px rgba(255, 215, 0, 0.5);
+        }
+
+        .product-overlay button:hover {
+            background: gold;
+            color: black;
+        }
+
+        /* Responsive */
+        @media(max-width: 1024px){
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media(max-width: 600px){
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="products-section">
+        <h2 class="products-title">Nuestros Productos</h2>
+        <div class="products-grid">
+
+            <!-- Producto 1 -->
+            <div class="product-card">
+                <img src="vestido1.jpg" alt="Vestido 1">
+                <div class="product-overlay">
+                    <button>Rentar</button>
+                    <button>Comprar</button>
+                </div>
+            </div>
+
+            <!-- Producto 2 -->
+            <div class="product-card">
+                <img src="vestido2.jpg" alt="Vestido 2">
+                <div class="product-overlay">
+                    <button>Rentar</button>
+                    <button>Comprar</button>
+                </div>
+            </div>
+
+            <!-- Producto 3 -->
+            <div class="product-card">
+                <img src="vestido3.jpg" alt="Vestido 3">
+                <div class="product-overlay">
+                    <button>Rentar</button>
+                    <button>Comprar</button>
+                </div>
+            </div>
+
+            <!-- Producto 4 -->
+            <div class="product-card">
+                <img src="vestido4.jpg" alt="Vestido 4">
+                <div class="product-overlay">
+                    <button>Rentar</button>
+                    <button>Comprar</button>
+                </div>
+            </div>
+
+            <!-- Producto 5 -->
+            <div class="product-card">
+                <img src="vestido5.jpg" alt="Vestido 5">
+                <div class="product-overlay">
+                    <button>Rentar</button>
+                    <button>Comprar</button>
+                </div>
+            </div>
+
+            <!-- Producto 6 -->
+            <div class="product-card">
+                <img src="vestido6.jpg" alt="Vestido 6">
+                <div class="product-overlay">
+                    <button>Rentar</button>
+                    <button>Comprar</button>
+                </div>
+            </div>
+
+            <!-- Producto 7 -->
+            <div class="product-card">
+                <img src="vestido7.jpg" alt="Vestido 7">
+                <div class="product-overlay">
+                    <button>Rentar</button>
+                    <button>Comprar</button>
+                </div>
+            </div>
+
+            <!-- Producto 8 -->
+            <div class="product-card">
+                <img src="vestido8.jpg" alt="Vestido 8">
+                <div class="product-overlay">
+                    <button>Rentar</button>
+                    <button>Comprar</button>
+                </div>
+            </div>
+
+            <!-- Producto 9 -->
+            <div class="product-card">
+                <img src="vestido9.jpg" alt="Vestido 9">
+                <div class="product-overlay">
+                    <button>Rentar</button>
+                    <button>Comprar</button>
+                </div>
+            </div>
+
+            <!-- Producto 10 -->
+            <div class="product-card">
+                <img src="vestido10.jpg" alt="Vestido 10">
+                <div class="product-overlay">
+                    <button>Rentar</button>
+                    <button>Comprar</button>
+                </div>
+            </div>
+
+            <!-- Producto 11 -->
+            <div class="product-card">
+                <img src="vestido11.jpg" alt="Vestido 11">
+                <div class="product-overlay">
+                    <button>Rentar</button>
+                    <button>Comprar</button>
+                </div>
+            </div>
+
+            <!-- Producto 12 -->
+            <div class="product-card">
+                <img src="vestido12.jpg" alt="Vestido 12">
+                <div class="product-overlay">
+                    <button>Rentar</button>
+                    <button>Comprar</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>
