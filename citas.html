@@ -227,49 +227,65 @@
         }
 
         /* ===== FORMULARIO DE CITA ===== */
-        .appointment-section {
-            width: 100%;
-            max-width: 600px;
-            margin: 80px auto;
-            padding: 40px 20px;
-            background: rgba(30,30,30,0.9);
-            border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
-        }
+       /* ===== FORMULARIO DE CITA ===== */
+.appointment-section {
+    width: 90%;
+    max-width: 600px;
+    margin: 80px auto;
+    padding: 40px 20px;
+    background: rgba(30,30,30,0.9);
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    box-sizing: border-box; /* importante */
+}
 
-        .appointment-section h2 {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 30px;
-            color: #EEEDE8;
-        }
+.appointment-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #EEEDE8;
+}
 
-        .appointment-section input,
-        .appointment-section textarea,
-        .appointment-section input[type="datetime-local"] {
-            width: 100%;
-            padding: 12px 15px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            border: none;
-            font-size: 1rem;
-        }
+.appointment-section input,
+.appointment-section textarea,
+.appointment-section input[type="datetime-local"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+    box-sizing: border-box; /* evita que se salga del contenedor */
+}
 
-        .appointment-section button {
-            background: #EEEDE8;
-            color: #000;
-            border: none;
-            padding: 12px 25px;
-            font-size: 1rem;
-            font-weight: 500;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: 0.2s;
-        }
+.appointment-section button {
+    background: #EEEDE8;
+    color: #000;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+    width: 100%; /* que ocupe todo el ancho del contenedor */
+    box-sizing: border-box;
+}
 
-        .appointment-section button:hover {
-            background: #f5f5f5;
-        }
+.appointment-section button:hover {
+    background: #f5f5f5;
+}
+
+/* Ajustes responsive extra */
+@media (max-width: 500px) {
+    .appointment-section {
+        padding: 30px 15px;
+    }
+
+    .appointment-section h2 {
+        font-size: 1.6rem;
+    }
+
     </style>
 </head>
 
