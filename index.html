@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diseños Josefas</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
-  <style>
+    <style>
 /* ===== Fuentes y Reset ===== */
 body, html {
     margin: 0;
@@ -14,11 +14,16 @@ body, html {
     font-family: 'Montserrat', sans-serif;
     background: #000;
     overflow-x: hidden;
+    color: #EEEDE8;
 }
 
 img {
     display: block;
     max-width: 100%;
+}
+
+a {
+    text-decoration: none;
 }
 
 /* ===== NAVBAR ===== */
@@ -31,6 +36,9 @@ img {
     justify-content: space-between;
     padding: 18px 50px;
     box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .navbar-title {
@@ -45,9 +53,7 @@ img {
 }
 
 .navbar-center a {
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
+    color: #EEEDE8;
     transition: 0.2s;
 }
 
@@ -56,17 +62,16 @@ img {
 }
 
 .navbar-button {
-    background: white;
-    color: black;
+    background: #EEEDE8;
+    color: #000;
     padding: 10px 20px;
     border-radius: 4px;
-    text-decoration: none;
     font-weight: 500;
     transition: 0.2s;
 }
 
 .navbar-button:hover {
-    background: #e9e9e9;
+    background: #f5f5f5;
 }
 
 /* ===== HERO ===== */
@@ -114,7 +119,7 @@ img {
 }
 
 .hero-title {
-    color: white;
+    color: #FFF;
     font-size: 4rem;
     margin: 0;
     text-shadow: 0 0 18px rgba(0,0,0,0.9);
@@ -137,7 +142,6 @@ img {
 
 .hero-pill-menu a {
     color: #EEEDE8;
-    text-decoration: none;
     font-size: 1.1rem;
     font-weight: 400;
 }
@@ -180,31 +184,7 @@ img {
     object-fit: cover;
 }
 
-
-<section class="gallery-section" id="galeria">
-    <h2 class="gallery-title">Galería</h2>
-
-    <div class="gallery-grid">
-        <div class="gallery-item">
-            <img src="fotogal1.jpg" alt="Galería 1">
-            <div class="overlay">Ver detalle</div>
-        </div>
-        <div class="gallery-item">
-            <img src="fotogal2.jpg" alt="Galería 2">
-            <div class="overlay">Ver detalle</div>
-        </div>
-        <div class="gallery-item">
-            <img src="fotogal3.jpg" alt="Galería 3">
-            <div class="overlay">Ver detalle</div>
-        </div>
-        <div class="gallery-item">
-            <img src="fotogal4.jpg" alt="Galería 4">
-            <div class="overlay">Ver detalle</div>
-        </div>
-    </div>
-</section>
-
-/* ===== Galería Premium ===== */
+/* ===== GALERÍA PREMIUM ===== */
 .gallery-section {
     width: 100%;
     padding: 60px 20px;
@@ -289,11 +269,7 @@ img {
         height: 220px;
     }
 }
-</style>
-
-
-
-      
+    </style>
 </head>
 
 <body>
@@ -311,48 +287,55 @@ img {
         <a href="#cita" class="navbar-button">Agenda una cita</a>
     </nav>
 
+    <!-- HERO -->
+    <section class="hero-josefas">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
 
-   <section class="hero-josefas">
-    <div class="hero-bg"></div>
-    <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-subtitle">Diseños Josefas</span>
+            <h1 class="hero-title">Elegancia con tradición</h1>
 
-    <div class="hero-content">
-        <span class="hero-subtitle">Diseños Josefas</span>
-        <h1 class="hero-title">Elegancia con tradición</h1>
-
-        <div class="hero-pill-menu">
-            <a href="#galeria">Galería</a>
-            <a href="#materiales">Materiales</a>
-            <a href="#historia">Historia</a>
+            <div class="hero-pill-menu">
+                <a href="#galeria">Galería</a>
+                <a href="#materiales">Materiales</a>
+                <a href="#historia">Historia</a>
+            </div>
         </div>
-    </div>
-</section>
-
-
-    <!-- IPAD SECTION -->    
-    
-    <section class="ipad-section">
-    <div class="ipad-frame horizontal">
-        <div class="ipad-screen">
-            <video src="video2.mp4" autoplay muted loop playsinline></video>
-         </div>
-    </div>
     </section>
 
-<!-- Galeria SECTION -->    
+    <!-- IPAD SECTION -->
+    <section class="ipad-section">
+        <div class="ipad-frame horizontal">
+            <div class="ipad-screen">
+                <video src="video2.mp4" autoplay muted loop playsinline></video>
+            </div>
+        </div>
+    </section>
 
-    
-   <section class="gallery-section" id="galeria">
-    <h2 class="gallery-title">Galería</h2>
+    <!-- GALERÍA PREMIUM -->
+    <section class="gallery-section" id="galeria">
+        <h2 class="gallery-title">Galería</h2>
 
-    <div class="gallery-grid">
-        <img src="fotogal1.jpg">
-        <img src="fotogal2.jpg">
-        <img src="fotogal3.jpg">
-        <img src="fotogal4.jpg">
-
-    </div>
-</section>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="fotogal1.jpg" alt="Galería 1">
+                <div class="overlay">Ver detalle</div>
+            </div>
+            <div class="gallery-item">
+                <img src="fotogal2.jpg" alt="Galería 2">
+                <div class="overlay">Ver detalle</div>
+            </div>
+            <div class="gallery-item">
+                <img src="fotogal3.jpg" alt="Galería 3">
+                <div class="overlay">Ver detalle</div>
+            </div>
+            <div class="gallery-item">
+                <img src="fotogal4.jpg" alt="Galería 4">
+                <div class="overlay">Ver detalle</div>
+            </div>
+        </div>
+    </section>
 
 </body>
 </html>
