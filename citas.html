@@ -1,1 +1,377 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseños Josefas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
+    <style>
+        /* ===== Fuentes y Reset ===== */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            background: #000;
+            overflow-x: hidden;
+            color: #EEEDE8;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            width: 100%;
+            background: #000;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 50px;
+            box-sizing: border-box;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar-title {
+            font-size: 1.6rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        .navbar-center {
+            display: flex;
+            gap: 40px;
+        }
+
+        .navbar-center a {
+            color: #EEEDE8;
+            transition: 0.2s;
+        }
+
+        .navbar-center a:hover {
+            opacity: 0.7;
+        }
+
+        .navbar-button {
+            background: #EEEDE8;
+            color: #000;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: 0.2s;
+        }
+
+        .navbar-button:hover {
+            background: #f5f5f5;
+        }
+
+        /* ===== HERO ===== */
+        .hero-josefas {
+            position: relative;
+            width: 100%;
+            min-height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 20px;
+            overflow: visible;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background-image: url('backhero.jpg');
+            background-repeat: no-repeat;
+            background-position: center top;
+            background-size: cover; 
+            z-index: 1;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.55);
+            z-index: 2;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            max-width: 900px;
+            margin-top: -80px;
+        }
+
+        .hero-subtitle {
+            color: #EEEDE8;
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+            text-shadow: 0 0 12px rgba(0,0,0,0.8);
+        }
+
+        .hero-title {
+            color: #FFF;
+            font-size: 4rem;
+            margin: 0;
+            text-shadow: 0 0 18px rgba(0,0,0,0.9);
+        }
+
+        .hero-pill-menu {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            background: rgba(20,20,20,0.8);
+            padding: 18px 40px;
+            border-radius: 50px;
+            backdrop-filter: blur(6px);
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-pill-menu a {
+            color: #EEEDE8;
+            font-size: 1.1rem;
+            font-weight: 400;
+        }
+
+        .hero-pill-menu a:hover {
+            opacity: 0.7;
+        }
+
+        /* ===== IPAD SECTION ===== */
+        .ipad-section {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin: -180px 0 80px 0;
+            position: relative;
+            z-index: 50;
+        }
+
+        .ipad-frame {
+            width: 800px;
+            height: 480px;
+            background: #111;
+            border-radius: 18px;
+            padding: 5px;
+            box-shadow: 0 12px 45px rgba(0,0,0,0.3);
+            position: relative;
+        }
+
+        .ipad-screen {
+            width: 100%;
+            height: 100%;
+            background: black;
+            border-radius: 18px;
+            overflow: hidden;
+        }
+
+        .ipad-screen video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* ===== GALERÍA ===== */
+        .gallery-section {
+            width: 100%;
+            padding: 50px 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .gallery-title {
+            text-align: center;
+            font-size: 2.4rem;
+            color: #EEEDE8;
+            letter-spacing: 3px;
+            margin-bottom: 60px;
+            text-shadow: 0 5px 25px rgba(0,0,0,0.5);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            max-width: 1300px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+            border-radius: 18px;
+            display: block;
+            box-shadow: 0px 10px 40px rgba(0,0,0,0.4);
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .gallery-grid img:hover {
+            transform: scale(1.02);
+            opacity: 0.9;
+        }
+
+        /* ===== FORMULARIO DE CITA ===== */
+        .appointment-section {
+            width: 100%;
+            max-width: 600px;
+            margin: 80px auto;
+            padding: 40px 20px;
+            background: rgba(30,30,30,0.9);
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        }
+
+        .appointment-section h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: #EEEDE8;
+        }
+
+        .appointment-section input,
+        .appointment-section textarea,
+        .appointment-section input[type="datetime-local"] {
+            width: 100%;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .appointment-section button {
+            background: #EEEDE8;
+            color: #000;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1rem;
+            font-weight: 500;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .appointment-section button:hover {
+            background: #f5f5f5;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="navbar-title">Diseños Josefas</div>
+
+        <div class="navbar-center">
+            <a href="#modelos">Modelos</a>
+            <a href="#colores">Colores</a>
+            <a href="#acerca">Acerca de</a>
+        </div>
+
+        <a href="#cita" class="navbar-button">Haz una cita</a>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero-josefas">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-subtitle">Diseños Josefas</span>
+            <h1 class="hero-title">Elegancia con tradición</h1>
+
+            <div class="hero-pill-menu">
+                <a href="#galeria">Galería</a>
+                <a href="#materiales">Materiales</a>
+                <a href="#historia">Historia</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- IPAD SECTION -->    
+    <section class="ipad-section">
+        <div class="ipad-frame horizontal">
+            <div class="ipad-screen">
+                <video src="video2.mp4" autoplay muted loop playsinline></video>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERÍA -->
+    <section class="gallery-section" id="galeria">
+        <h2 class="gallery-title">Galería</h2>
+        <div class="gallery-grid">
+            <img src="fotogal1.jpg">
+            <img src="fotogal2.jpg">
+            <img src="fotogal3.jpg">
+            <img src="fotogal4.jpg">
+        </div>
+    </section>
+
+    <!-- FORMULARIO DE CITA -->
+    <section class="appointment-section" id="cita">
+        <h2>Agenda tu cita</h2>
+        <form id="appointmentForm">
+            <input type="text" name="name" placeholder="Nombre completo" required>
+            <input type="email" name="email" placeholder="Correo electrónico" required>
+            <textarea name="message" placeholder="Mensaje" rows="4"></textarea>
+            <input type="datetime-local" name="datetime" required>
+            <button type="submit">Enviar cita</button>
+        </form>
+    </section>
+
+    <script>
+        // Formulario para Google Calendar
+        const form = document.getElementById("appointmentForm");
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const formData = new FormData(form);
+            const start = formData.get("datetime");
+            const endDate = new Date(start);
+            endDate.setMinutes(endDate.getMinutes() + 30);
+
+            const data = {
+                name: formData.get("name"),
+                email: formData.get("email"),
+                message: formData.get("message"),
+                start: new Date(start).toISOString(),
+                end: endDate.toISOString()
+            };
+
+            try {
+                const res = await fetch("https://portfolio-production-1cfa.up.railway.app/create-event", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(data)
+                });
+                const result = await res.json();
+                if(result.success){
+                    alert("Cita creada! Revisa tu Google Calendar.");
+                    form.reset();
+                } else {
+                    alert("Error: " + result.error);
+                }
+            } catch(err){
+                alert("Error al conectar con el backend: " + err);
+            }
+        });
+    </script>
+
+</body>
+</html>
