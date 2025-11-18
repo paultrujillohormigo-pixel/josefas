@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diseños Josefas</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    <style>
+  <style>
 /* ===== Fuentes y Reset ===== */
 body, html {
     margin: 0;
@@ -14,16 +14,11 @@ body, html {
     font-family: 'Montserrat', sans-serif;
     background: #000;
     overflow-x: hidden;
-    color: #EEEDE8;
 }
 
 img {
     display: block;
     max-width: 100%;
-}
-
-a {
-    text-decoration: none;
 }
 
 /* ===== NAVBAR ===== */
@@ -36,9 +31,6 @@ a {
     justify-content: space-between;
     padding: 18px 50px;
     box-sizing: border-box;
-    position: sticky;
-    top: 0;
-    z-index: 100;
 }
 
 .navbar-title {
@@ -53,7 +45,9 @@ a {
 }
 
 .navbar-center a {
-    color: #EEEDE8;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
     transition: 0.2s;
 }
 
@@ -62,16 +56,17 @@ a {
 }
 
 .navbar-button {
-    background: #EEEDE8;
-    color: #000;
+    background: white;
+    color: black;
     padding: 10px 20px;
     border-radius: 4px;
+    text-decoration: none;
     font-weight: 500;
     transition: 0.2s;
 }
 
 .navbar-button:hover {
-    background: #f5f5f5;
+    background: #e9e9e9;
 }
 
 /* ===== HERO ===== */
@@ -119,7 +114,7 @@ a {
 }
 
 .hero-title {
-    color: #FFF;
+    color: white;
     font-size: 4rem;
     margin: 0;
     text-shadow: 0 0 18px rgba(0,0,0,0.9);
@@ -142,6 +137,7 @@ a {
 
 .hero-pill-menu a {
     color: #EEEDE8;
+    text-decoration: none;
     font-size: 1.1rem;
     font-weight: 400;
 }
@@ -184,28 +180,26 @@ a {
     object-fit: cover;
 }
 
-/* ===== GALERÍA PREMIUM ===== */
+/* ===== GALERÍA ===== */
 .gallery-section {
     width: 100%;
-    padding: 60px 20px;
-    background: linear-gradient(180deg, #0a0a0a, #111);
+    padding: 50px 10px;
+    background: #000;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .gallery-title {
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-    color: #f8f8f8;
-    text-shadow: 0 4px 20px rgba(0,0,0,0.6);
-    letter-spacing: 2px;
-    font-size: 2.8rem;
-    margin-bottom: 60px;
     text-align: center;
+    font-size: 2.4rem;
+    color: #EEEDE8;
+    letter-spacing: 3px;
+    margin-bottom: 60px;
+    text-shadow: 0 5px 25px rgba(0,0,0,0.5);
 }
 
-/* Grid */
+/* GRID PREMIUM CON IMÁGENES IGUALES */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -215,60 +209,21 @@ a {
     margin: 0 auto;
 }
 
-/* Item */
-.gallery-item {
-    position: relative;
-    overflow: hidden;
-    border-radius: 18px;
-}
-
-.gallery-item img {
+.gallery-grid img {
     width: 100%;
     height: 420px;
     object-fit: cover;
     border-radius: 18px;
     display: block;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.7), inset 0 0 5px rgba(255,255,255,0.05);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0px 10px 40px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.gallery-item:hover img {
-    transform: scale(1.05) rotate(-0.5deg);
-    box-shadow: 0 20px 50px rgba(0,0,0,0.8), inset 0 0 10px rgba(255,255,255,0.1);
+.gallery-grid img:hover {
+    transform: scale(1.02);
+    opacity: 0.9;
 }
 
-/* Overlay */
-.overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.3);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    color: #fff;
-    font-size: 1.2rem;
-    letter-spacing: 1px;
-    font-weight: 500;
-}
-
-.gallery-item:hover .overlay {
-    opacity: 1;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .gallery-item img {
-        height: 300px;
-    }
-}
-
-@media (max-width: 480px) {
-    .gallery-item img {
-        height: 220px;
-    }
-}
     </style>
 </head>
 
@@ -287,55 +242,44 @@ a {
         <a href="#cita" class="navbar-button">Agenda una cita</a>
     </nav>
 
-    <!-- HERO -->
-    <section class="hero-josefas">
-        <div class="hero-bg"></div>
-        <div class="hero-overlay"></div>
+   <!-- HERO -->
+   <section class="hero-josefas">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
 
-        <div class="hero-content">
-            <span class="hero-subtitle">Diseños Josefas</span>
-            <h1 class="hero-title">Elegancia con tradición</h1>
+    <div class="hero-content">
+        <span class="hero-subtitle">Diseños Josefas</span>
+        <h1 class="hero-title">Elegancia con tradición</h1>
 
-            <div class="hero-pill-menu">
-                <a href="#galeria">Galería</a>
-                <a href="#materiales">Materiales</a>
-                <a href="#historia">Historia</a>
-            </div>
+        <div class="hero-pill-menu">
+            <a href="#galeria">Galería</a>
+            <a href="#materiales">Materiales</a>
+            <a href="#historia">Historia</a>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- IPAD SECTION -->
-    <section class="ipad-section">
-        <div class="ipad-frame horizontal">
-            <div class="ipad-screen">
-                <video src="video2.mp4" autoplay muted loop playsinline></video>
-            </div>
-        </div>
-    </section>
+<!-- IPAD SECTION -->    
+<section class="ipad-section">
+    <div class="ipad-frame horizontal">
+        <div class="ipad-screen">
+            <video src="video2.mp4" autoplay muted loop playsinline></video>
+         </div>
+    </div>
+</section>
 
-    <!-- GALERÍA PREMIUM -->
-    <section class="gallery-section" id="galeria">
-        <h2 class="gallery-title">Galería</h2>
+<!-- Galeria SECTION -->    
+<section class="gallery-section" id="galeria">
+    <h2 class="gallery-title">Galería</h2>
 
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="fotogal1.jpg" alt="Galería 1">
-                <div class="overlay">Ver detalle</div>
-            </div>
-            <div class="gallery-item">
-                <img src="fotogal2.jpg" alt="Galería 2">
-                <div class="overlay">Ver detalle</div>
-            </div>
-            <div class="gallery-item">
-                <img src="fotogal3.jpg" alt="Galería 3">
-                <div class="overlay">Ver detalle</div>
-            </div>
-            <div class="gallery-item">
-                <img src="fotogal4.jpg" alt="Galería 4">
-                <div class="overlay">Ver detalle</div>
-            </div>
-        </div>
-    </section>
+    <div class="gallery-grid">
+        <img src="fotogal1.jpg">
+        <img src="fotogal2.jpg">
+        <img src="fotogal3.jpg">
+        <img src="fotogal4.jpg">
+    </div>
+</section>
 
 </body>
 </html>
+
